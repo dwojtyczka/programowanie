@@ -1,1 +1,4 @@
-to jest wersja z gałęzi test
+to jest wersja z gałęzi testLinia 1 do commita 1
+Linia 2 do commita 2
+Linia 3 do commita 2
+Linia 4 do commita 3
