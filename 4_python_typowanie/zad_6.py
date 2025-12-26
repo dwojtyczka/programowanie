@@ -4,6 +4,7 @@ def przetworz_listy(lista1: list, lista2: list) -> list:
     wynik = [x ** 3 for x in bez_duplikatow]
     return wynik
 
+
 l1 = [1, 2, 2]
 l2 = [2, 3, 4]
 

@@ -2,6 +2,7 @@ import argparse
 import requests
 from typing import List, Optional
 
+
 class Brewery:
     def __init__(self, name: str, city: str, state: str, brewery_type: str):
         self.name = name
@@ -11,6 +12,7 @@ class Brewery:
 
     def __str__(self) -> str:
         return f"Browar: {self.name} ({self.city}, {self.state}) - Typ: {self.brewery_type}"
+
 
 def pobierz_browary(city: Optional[str] = None) -> List[Brewery]:
     url = "https://api.openbrewerydb.org/v1/breweries"
@@ -34,6 +36,7 @@ def pobierz_browary(city: Optional[str] = None) -> List[Brewery]:
         lista_browarow.append(nowy_browar)
 
     return lista_browarow
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
