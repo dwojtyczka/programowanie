@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Student:
     def __init__(self, name: str, marks: List[int]):
         self.name = name
@@ -10,6 +11,7 @@ class Student:
 
     def __str__(self) -> str:
         return f"Student: {self.name}"
+
 
 class Library:
     def __init__(self, city: str, street: str, zip_code: str, open_hours: str, phone: str):
@@ -22,8 +24,10 @@ class Library:
     def __str__(self) -> str:
         return f"Biblioteka: {self.city}, ul. {self.street} ({self.open_hours})"
 
+
 class Employee:
-    def __init__(self, first_name: str, last_name: str, hire_date: str, birth_date: str, city: str, street: str, zip_code: str, phone: str):
+    def __init__(self, first_name: str, last_name: str, hire_date: str, birth_date: str, city: str, street: str,
+                 zip_code: str, phone: str):
         self.first_name = first_name
         self.last_name = last_name
         self.hire_date = hire_date
@@ -36,8 +40,10 @@ class Employee:
     def __str__(self) -> str:
         return f"Pracownik: {self.first_name} {self.last_name} (Zatrudniony: {self.hire_date})"
 
+
 class Book:
-    def __init__(self, library: Library, publication_date: str, author_name: str, author_surname: str, number_of_pages: int):
+    def __init__(self, library: Library, publication_date: str, author_name: str, author_surname: str,
+                 number_of_pages: int):
         self.library = library
         self.publication_date = publication_date
         self.author_name = author_name
@@ -46,6 +52,7 @@ class Book:
 
     def __str__(self) -> str:
         return f"'{self.author_name} {self.author_surname}' (Dostępna w: {self.library.city})"
+
 
 class Order:
     def __init__(self, employee: Employee, student: Student, books: List[Book], order_date: str):
@@ -60,6 +67,7 @@ class Order:
                 f"  Obsługujący: {self.employee.last_name}\n"
                 f"  Zamawiający: {self.student.name}\n"
                 f"  Książki: {ksiazki_str}")
+
 
 lib_warszawa = Library("Warszawa", "Koszykowa 1", "00-001", "8:00-20:00", "111-222-333")
 lib_krakow = Library("Kraków", "Rajska 1", "31-124", "9:00-19:00", "444-555-666")
